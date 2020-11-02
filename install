@@ -1,0 +1,12 @@
+passwd &&
+pacman -S base-devel linux-lts linux-firmware elogind bspwm ffmpeg feh imagemagick picom termite xorg-xinit xdg-utils os-prober grub xorg networkmanager networkmanager-runit
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub &&
+grub-mkconfig -o /boot/grub/grub.cfg &&
+ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime && hwclock --systohc &&
+echo "en_US.UTF-8 UTF-8" >> locale.gen && locale-gen &&
+echo "export LANG="en_US.UTF-8" " >> /etc/locale.conf &&
+echo "x" >> /etc/hostname
+sh addons
+cp config/etc/* /etc
+cp config/home/.xinitrc ~/ 
+
