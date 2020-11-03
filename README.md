@@ -25,7 +25,9 @@ mount /dev/sda1 /mnt/boot
 basestrap /mnt base elogind-runit git xf86-video-<>
 fstabgen -U /mnt >> /mnt/etc/fstab
 artools-chroot /mnt
-git clone https://github.com/XA-DE/<>.git
+git clone https://github.com/XA-DE/bspartix.git
+cd bspartix
+sh install
 exit
 umount -R /mnt
 reboot

@@ -1,3 +1,7 @@
+pacman -S ffmpeg feh imagemagick bspwm sxhkd
+cp home/.xinitrc ~/
+cp home/.config ~/
+
 curl -O https://blackarch.org/strap.sh
 sh strap.sh
 pacman -Syu
