@@ -2,6 +2,7 @@
 
 #STEPS FOR INSTALLATION
 #for PC
+
 su
 ip link est wlan0 up
 rfkill unblock wifi #if above commands results as error
@@ -15,6 +16,7 @@ connect <wifi-id>
 quit
 
 #for VM
+
 lsblk
 cfdisk /dev/sda
 mkfs.fat -F32 /dev/sda1

@@ -49,6 +49,4 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 setxkbmap us &
-xrandr --output Virtual1 --mode 1360x768 --rate 60.02 &
-picom -f &
 exec bspwm
