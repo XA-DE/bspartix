@@ -42,8 +42,8 @@ font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brands:pixelsize=12;2
 
 modules-left = bspwm i3
-modules-center = xwindow pacman-updates
-modules-right = spotify filesystem pulseaudio xkeyboard memory cpu wlan eth battery temperature  date powermenu
+;modules-center = xwindow pacman-updates
+modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth battery temperature date
 
 separator = |
 tray-position = none
@@ -134,7 +134,7 @@ label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
 ; Separator in between workspaces
-; label-separator = |
+label-separator = |
 
 [module/i3]
 type = internal/i3

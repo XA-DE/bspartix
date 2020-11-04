@@ -1,4 +1,8 @@
-pacman -S ffmpeg feh imagemagick bspwm sxhkd
+pacman -S --noconfirm xorg-xrandr fmpeg feh imagemagick bspwm sxhkd firefox vim xorg-xrandr
+useradd -mG wheel x &&
+passwd x &&
+EDITOR=vim visudo 
+# uncomment %wheel
 cp home/.xinitrc ~/
 cp -r home/.config ~/
 
