@@ -1,10 +1,4 @@
 pacman -S --noconfirm xorg-xrandr fmpeg feh imagemagick bspwm sxhkd firefox vim xorg-xrandr
-useradd -mG wheel x &&
-passwd x &&
-EDITOR=vim visudo 
-# uncomment %wheel
-cp home/.xinitrc ~/
-cp -r home/.config ~/
 
 curl -O https://blackarch.org/strap.sh
 sh strap.sh
@@ -12,3 +6,8 @@ pacman -Syu
 git clone https://github.com/terroo/wallset down-wallset
 cd down-wallset
 sh install.sh
+useradd -mG wheel x &&
+passwd x &&
+EDITOR=vim visudo &&
+cp home/.xinitrc /home/x
+cp home/.config /home/x
