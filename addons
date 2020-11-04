@@ -1,4 +1,4 @@
-pacman -S --noconfirm xorg-xrandr fmpeg feh imagemagick bspwm sxhkd firefox vim xorg-xrandr
+pacman -S --noconfirm xorg-xrandr ffmpeg feh imagemagick bspwm sxhkd firefox vim xorg-xrandr
 
 curl -O https://blackarch.org/strap.sh
 sh strap.sh
@@ -9,5 +9,5 @@ sh install.sh
 useradd -mG wheel x &&
 passwd x &&
 EDITOR=vim visudo &&
-cp home/.xinitrc /home/x
-cp home/.config /home/x
+cp -r home/.xinitrc /home/x
+cp -r home/.config /home/x
