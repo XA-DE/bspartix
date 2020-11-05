@@ -1,13 +1,13 @@
-useradd -mG wheel x &&
 pacman -S --noconfirm xorg-xrandr ffmpeg feh imagemagick bspwm sxhkd firefox vim xorg-xrandr &&
 curl -O https://blackarch.org/strap.sh &&
 sh strap.sh &&
 pacman -Syy &&
+useradd -mG wheel x &&
+passwd x &&
+cp -r home/. /home/x &&
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+
 git clone https://github.com/terroo/wallset down-wallset &&
 cd down-wallset &&
 sh install.sh &&
-
-cp -r home/. /home/x &&
-passwd x &&
-echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
