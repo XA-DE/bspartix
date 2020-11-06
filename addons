@@ -1,13 +1,24 @@
-pacman -S --noconfirm xorg-xrandr ffmpeg feh imagemagick bspwm sxhkd firefox vim xorg-xrandr &&
+## DEPENDENCIES
+pacman -S --noconfirm xorg-xrandr ffmpeg feh imagemagick bspwm sxhkd firefox vim &&
+
+## BLACKARCH
 curl -O https://blackarch.org/strap.sh &&
 sh strap.sh &&
 pacman -Syy &&
+
+## USER x
 useradd -mG wheel x &&
 passwd x &&
-cp -r home/. /home/x &&
-echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers &&
 
+
+## CONFIG
+cp -r conf/home/. /home/x &&
+cp -r conf/truetype /usr/share/fonts &&
+rm -rf /etc/xdg/picom.conf &&
+cp -r conf/picom.conf /etc/xdg &&
+
+## WALLSET
 git clone https://github.com/terroo/wallset down-wallset &&
 cd down-wallset &&
-sh install.sh &&
-
+sh install.sh
