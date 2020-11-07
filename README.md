@@ -53,6 +53,7 @@ fstabgen -U /mnt >> /mnt/etc/fstab
 artools-chroot /mnt
 
 ################# with BSPWM  ###############################
+
 git clone https://github.com/XA-DE/bspartix.git
 
 cd bspartix
