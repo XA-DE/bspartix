@@ -14,6 +14,15 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+;bspc rule -a mplayer2 state=floating
+;bspc rule -a Kupfer.py focus=on
+;bspc rule -a Screenkey manage=off
+
+bspc rule -a Pavucontrol state=floating rectangle 200x200+50+50 sticky=off
+
+# Remove x cursor
+xsetroot -cursor_name left_ptr &
+
+#enable touchpad tapping and natural scrolling
+xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled"
