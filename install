@@ -1,5 +1,5 @@
 passwd
-pacman -S --noconfirm base-devel linux-lts linux-firmware efibootmgr elogind picom termite xorg-server xorg-xinit xdg-utils os-prober grub networkmanager networkmanager-runit
+pacman -S --noconfirm base-devel linux-lts linux-firmware efibootmgr elogind xdg-utils os-prober grub networkmanager networkmanager-runit
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime && hwclock --systohc &&
