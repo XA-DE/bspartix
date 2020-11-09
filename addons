@@ -15,7 +15,7 @@ echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers &&
 ## CONFIG
 cp -r conf/home/. /home/x &&
 cp -r conf/truetype /usr/share/fonts &&
-rm -rf /etc/xdg/picom.conf
+#rm -rf /etc/xdg/picom.conf
 
 ## WALLSET
 git clone https://github.com/terroo/wallset down-wallset &&
