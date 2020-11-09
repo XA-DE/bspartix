@@ -1,5 +1,5 @@
 ## DEPENDENCIES
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr polybar ffmpeg feh imagemagick picom bspwm sxhkd firefox vim &&
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr polybar ffmpeg feh imagemagick picom bspwm sxhkd termite firefox vim &&
 
 ## BLACKARCH
 curl -O https://blackarch.org/strap.sh &&
