@@ -15,9 +15,6 @@ echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers &&
 ## CONFIG
 cp -r conf/home/. /home/x &&
 cp -r conf/truetype /usr/share/fonts &&
-#rm -rf /etc/xdg/picom.conf
-mkdir /home/x/.config/picom
-cp /etc/xdg/picom.conf /home/x/.config/picom
 
 
 ## WALLSET
