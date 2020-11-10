@@ -1,5 +1,6 @@
 ## DEPENDENCIES
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr polybar ffmpeg feh imagemagick picom bspwm sxhkd termite firefox vim &&
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr polybar ffmpeg feh imagemagick bspwm firefox vim rxvt-unicode &&
+#sxhkd termite picom xdg-utils &&
 
 ## BLACKARCH
 curl -O https://blackarch.org/strap.sh &&
@@ -20,4 +21,5 @@ cp -r conf/truetype /usr/share/fonts &&
 ## WALLSET
 git clone https://github.com/terroo/wallset down-wallset &&
 cd down-wallset &&
-sh install.sh
+sh install.sh &&
+cd ..

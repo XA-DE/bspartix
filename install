@@ -1,10 +1,19 @@
+3# ROOT PASSWORD
 passwd
-pacman -S --noconfirm base-devel linux-lts linux-firmware efibootmgr elogind xdg-utils os-prober grub networkmanager networkmanager-runit
+
+## BASE
+pacman -S --noconfirm base-devel linux-lts linux-firmware efibootmgr elogind os-prober grub networkmanager networkmanager-runit
+
+## BOOTLOADER
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
+
+## SYSTEM CONFIG
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime && hwclock --systohc &&
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen &&
 echo "export LANG="en_US.UTF-8" " >> /etc/locale.conf &&
 echo "x" >> /etc/hostname
 cp etc/* /etc
+
+## ADDONS
 sh addons
