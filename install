@@ -2,8 +2,8 @@
 passwd
 
 ## BASE
-pacman -S --noconfirm base-devel linux-lts linux-firmware efibootmgr elogind os-prober grub networkmanager networkmanager-runit
-
+pacman -S --noconfirm base-devel linux-lts linux-firmware efibootmgr os-prober grub networkmanager networkmanager-runit
+#elogind
 ## BOOTLOADER
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
