@@ -8,8 +8,7 @@ pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr polybar ffmpeg feh imag
 curl -O https://blackarch.org/strap.sh &&
 sh strap.sh &&
 pacman -Syy &&
-yes | pacman -Scc
-yes | pacman -Sc
+yes | pacman -Scc &&
 
 ## USER x
 useradd -mG wheel x &&
