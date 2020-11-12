@@ -1,7 +1,7 @@
 pacman -Syy
 
 ## DEPENDENCIES
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr xdg-utils polybar ffmpeg feh imagemagick bspwm firefox vim sxhkd &&
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr xdg-utils polybar ffmpeg feh imagemagick bspwm vim sxhkd &&
 #sxhkd termite picom xdg-utils rxvt-unicode &&
 
 ## BLACKARCH
