@@ -46,7 +46,7 @@ mkdir /mnt/boot
 
 mount /dev/sda1 /mnt/boot
 
-basestrap /mnt base elogind-runit git intel-ucode xf86-video-<>
+basestrap /mnt base elogind-runit git <DRIVERS>
 
 fstabgen -U /mnt >> /mnt/etc/fstab
 
