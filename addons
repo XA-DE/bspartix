@@ -2,7 +2,6 @@ pacman -Syy
 
 ## DEPENDENCIES
 pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr xdg-utils polybar ffmpeg feh imagemagick bspwm vim sxhkd &&
-#sxhkd termite picom xdg-utils rxvt-unicode &&
 
 ## BLACKARCH
 curl -O https://blackarch.org/strap.sh &&
@@ -17,9 +16,9 @@ echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers &&
 
 
 ## CONFIG
-cp -r conf/home/. /home/x &&
-cp -r conf/truetype /usr/share/fonts &&
-
+cp -r truetype /usr/share/fonts &&
+git clone https://github.com/XA-DE/dotfiles.git &&
+cp -r dotfiles/. /home/x &&
 
 ## WALLSET
 git clone https://github.com/terroo/wallset down-wallset &&
