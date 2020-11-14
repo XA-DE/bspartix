@@ -1,19 +1,13 @@
 pacman -Syy
 
 ## DEPENDENCIES
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr xdg-utils polybar ffmpeg feh imagemagick bspwm vim sxhkd picom alacritty &&
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr xdg-utils polybar ffmpeg feh imagemagick bspwm vim sxhkd firefox picom alacritty &&
 
 ## BLACKARCH
 curl -O https://blackarch.org/strap.sh &&
 sh strap.sh &&
 pacman -Syy &&
 yes | pacman -Scc &&
-
-## USER x
-useradd -mG wheel x &&
-passwd x &&
-echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers &&
-
 
 ## CONFIG
 cp -r truetype /usr/share/fonts &&
@@ -25,3 +19,11 @@ git clone https://github.com/terroo/wallset down-wallset &&
 cd down-wallset &&
 sh install.sh &&
 cd ..
+
+## USER x
+useradd -mG wheel x &&
+passwd x &&
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers &&
+
+
+
