@@ -46,7 +46,7 @@ mkdir /mnt/boot
 
 mount /dev/sda1 /mnt/boot
 
-basestrap /mnt base elogind-runit git <DRIVERS>
+basestrap /mnt base elogind-runit git linux <DRIVERS> {linux-headers}{dkms}
 
 fstabgen -U /mnt >> /mnt/etc/fstab
 
