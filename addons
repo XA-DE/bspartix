@@ -1,7 +1,7 @@
 pacman -Syy
 
 ## DEPENDENCIES
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr xdg-utils polybar ffmpeg feh imagemagick bspwm vim sxhkd &&
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xrandr xdg-utils polybar ffmpeg feh imagemagick bspwm vim sxhkd picom alacritty &&
 
 ## BLACKARCH
 curl -O https://blackarch.org/strap.sh &&
