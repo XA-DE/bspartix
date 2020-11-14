@@ -9,21 +9,22 @@ sh strap.sh &&
 pacman -Syy &&
 yes | pacman -Scc &&
 
-## CONFIG
-cp -r truetype /usr/share/fonts &&
-git clone https://github.com/XA-DE/dotfiles.git &&
-cp -r dotfiles/. /home/x &&
-
 ## WALLSET
 git clone https://github.com/terroo/wallset down-wallset &&
 cd down-wallset &&
 sh install.sh &&
-cd ..
+cd .. &&
 
 ## USER x
 useradd -mG wheel x &&
 passwd x &&
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers &&
+
+## CONFIG
+cp -r truetype /usr/share/fonts &&
+git clone https://github.com/XA-DE/dotfiles.git &&
+cp -r dotfiles/. /home/x
+
 
 
 
