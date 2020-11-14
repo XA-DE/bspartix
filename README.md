@@ -8,7 +8,7 @@
 
 su
 
-ip link est wlan0 up
+ip link set wlan0 up
 
 rfkill unblock wifi #if above commands results as error
 
