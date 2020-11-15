@@ -16,4 +16,4 @@ echo "x" >> /etc/hostname
 cp etc/* /etc
 
 ## ADDONS
-sh addons
+# sh addons
