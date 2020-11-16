@@ -8,7 +8,9 @@
 
 su
 
-ip link set wlan0 up
+ip a
+
+ip link set wlan0 up # say wlan0 is my wifi adaptor
 
 rfkill unblock wifi #if above commands results as error
 
