@@ -34,7 +34,17 @@ quit
 
 lsblk
 
-cfdisk /dev/sda
+fdisk /dev/sda
+  g
+  n
+  >
+  >
+  +200m
+  t
+  uefi
+  n
+  w
+  q
 
 mkfs.fat -F32 /dev/sda1
 
