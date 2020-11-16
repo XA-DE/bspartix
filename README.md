@@ -3,9 +3,6 @@
 #STEPS FOR INSTALLATION
 #for PC
 
-
-
-
 su
 
 ip a
@@ -38,14 +35,23 @@ lsblk
 
 fdisk /dev/sda
   g
+  
   n
+  
   >
+  
   >
+  
   +200m
+  
   t
+  
   uefi
+  
   n
+  
   w
+  
   q
 
 mkfs.fat -F32 /dev/sda1
