@@ -1,12 +1,12 @@
 pacman -Syy
 
 ## DEPENDENCIES
-pacman -S --noconfirm alsa-utils thunar xf86-video-intel intel-ucode xorg-server xorg-xinit xorg-xrandr xdg-utils polybar feh ffmpeg imagemagick bspwm vim sxhkd firefox picom alacritty &&
+pacman -S --noconfirm alsa-utils thunar dmenu xf86-video-intel intel-ucode xorg-server xorg-xinit xorg-xrandr xdg-utils polybar feh ffmpeg imagemagick bspwm vim sxhkd firefox picom alacritty &&
 
 ## BLACKARCH
 curl -O https://blackarch.org/strap.sh &&
 sh strap.sh &&
-pacman -Syy &&
+pacman -Syu --noconfirm &&
 yes | pacman -Scc &&
 
 ## WALLSET
