@@ -11,6 +11,9 @@ yes | pacman -Scc &&
 ## WALLSET
 # git clone https://github.com/terroo/wallset down-wallset && cd down-wallset && sh install.sh && cd .. &&
 
+## dotfiles
+git clone https://github.com/XA-DE/dotfiles.git &&
+
 ## USER x
 useradd -mG wheel x &&
 passwd x &&
@@ -18,7 +21,6 @@ echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers &&
 
 ## CONFIG
 cp -r truetype /usr/share/fonts &&
-git clone https://github.com/XA-DE/dotfiles.git &&
 cp -r dotfiles/. /home/x
 
 
