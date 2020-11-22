@@ -20,6 +20,13 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers &&
 cp -r truetype /usr/share/fonts &&
 cp -r dotfiles/. /home/x &&
 
+## BT
+sudo cp  BCM43142A0-0a5c-21d7.hcd /lib/firmware/brcm/BCM43142A0-0a5c-21d7.hcd &&
+
+sudo modprobe -r btusb &&
+
+sudo modprobe btusb &&
+
 ## remove setup dir
 cd .. &&
 rm -rf bspartix
