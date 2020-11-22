@@ -21,11 +21,9 @@ cp -r truetype /usr/share/fonts &&
 cp -r dotfiles/. /home/x &&
 
 ## BT
-sudo cp  BCM43142A0-0a5c-21d7.hcd /lib/firmware/brcm/BCM43142A0-0a5c-21d7.hcd &&
-
-sudo modprobe -r btusb &&
-
-sudo modprobe btusb &&
+cp  BCM43142A0-0a5c-21d7.hcd /lib/firmware/brcm/BCM43142A0-0a5c-21d7.hcd &&
+modprobe -r btusb &&
+modprobe btusb &&
 
 ## remove setup dir
 cd .. &&
