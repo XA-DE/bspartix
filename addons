@@ -37,8 +37,6 @@ modprobe -r btusb &&
 modprobe btusb &&
 
 ## remove setup dir
-cd .. &&
-rm -rf bspartix
-
+cd ..
 
 
