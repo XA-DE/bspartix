@@ -2,13 +2,14 @@
 ## BLACKARCH
 curl -O https://blackarch.org/strap.sh &&
 sh strap.sh &&
-pacman -Syu --noconfirm &&
 
 ## dotfiles
 git clone https://github.com/XA-DE/dotfiles.git &&
 
 ## DEPENDENCIES
-pacman -S --noconfirm xf86-video-intel intel-ucode linux-headers linux-lts-headers xorg-server xorg-xinit xorg-xrandr xdg-utils bluez bluez-runit bluez-utils dkms broadcom-wl-dkms alsa-utils crda thunar dmenu polybar feh ffmpeg imagemagick bspwm vim sxhkd redshift picom alacritty yay &&
+pacman -Syy &&
+pacman -S --noconfirm xf86-video-intel intel-ucode xorg-server xorg-xinit xorg-xrandr xdg-utils bluez bluez-runit bluez-utils dkms broadcom-wl-dkms alsa-utils crda thunar dmenu polybar feh ffmpeg imagemagick bspwm vim sxhkd redshift picom alacritty yay &&
+# linux-headers linux-lts-headers base-devel
 yes | pacman -Scc &&
 
 ## USER x
