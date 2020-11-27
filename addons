@@ -8,7 +8,7 @@ git clone https://github.com/XA-DE/dotfiles.git &&
 
 ## DEPENDENCIES
 pacman -Syy &&
-pacman -S --noconfirm xf86-video-intel intel-ucode xorg-server xorg-xinit bluez bluez-runit bluez-utils dkms broadcom-wl-dkms alsa-utils crda thunar dmenu polybar feh bspwm vim sxhkd redshift picom alacritty yay &&
+pacman -S --noconfirm xf86-video-intel intel-ucode xorg-server xorg-xinit bluez bluez-runit bluez-utils dkms broadcom-wl-dkms alsa-utils crda thunar dmenu polybar feh bspwm vim sxhkd redshift picom alacritty &&
 # linux-headers linux-lts-headers base-devel
 yes | pacman -Scc &&
 
