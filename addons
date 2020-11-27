@@ -17,6 +17,12 @@ useradd -mG wheel x &&
 passwd x &&
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers &&
 echo "
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	x.localdomain	x
+" >> /etc/hosts
+##SOUND FIX
+echo "
 defaults.pcm.card 1
 defaults.ctl.card 1
 " >> /etc/asound.conf &&
