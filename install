@@ -2,8 +2,8 @@
 passwd &&
 
 ## BASE
-pacman -S --noconfirm filesystem bash coreutils file sed util-linux xz licenses esysusers etmpfiles iputils iproute2 elogind-runit linux linux-lts linux-firmware efibootmgr os-prober grub networkmanager networkmanager-runit
-
+pacman -S --noconfirm filesystem bash coreutils file sed util-linux xz licenses etmpfiles iputils iproute2 elogind-runit linux linux-lts linux-firmware efibootmgr os-prober grub networkmanager networkmanager-runit
+# esysusers
 ## BOOTLOADER
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
