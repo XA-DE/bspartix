@@ -1,3 +1,6 @@
+mkdir setup
+cd setup
+
 ## SERVICES
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime && hwclock --systohc &&
 ln -s /etc/runit/sv/NetworkManager /run/runit/service/NetworkManager
@@ -38,6 +41,7 @@ modprobe -r btusb &&
 modprobe btusb &&
 
 ## remove setup dir
-cd ..
+cd .. &&
+#rm -rf setup
 
 
