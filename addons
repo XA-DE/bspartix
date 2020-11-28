@@ -1,3 +1,6 @@
+## SERVICES
+ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime && hwclock --systohc &&
+ln -s /etc/runit/sv/NetworkManager /run/runit/service/NetworkManager
 
 ## BLACKARCH
 curl -O https://blackarch.org/strap.sh &&
@@ -16,11 +19,7 @@ yes | pacman -Scc &&
 useradd -mG wheel x &&
 passwd x &&
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers &&
-echo "
-127.0.0.1	localhost
-::1		localhost
-127.0.1.1	x.localdomain	x
-" >> /etc/hosts
+
 ##SOUND FIX
 echo "
 defaults.pcm.card 1
