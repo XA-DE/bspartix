@@ -30,7 +30,7 @@ defaults.ctl.card 1
 " >> /etc/asound.conf &&
 
 ## CONFIG
-cp -r truetype /usr/share/fonts &&
+#cp -r truetype /usr/share/fonts &&
 cp -r dotfiles/. /home/x &&
 
 ## BT
