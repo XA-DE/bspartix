@@ -3,7 +3,7 @@ cd setup
 
 ## SERVICES
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime && hwclock --systohc &&
-ln -s /etc/runit/sv/NetworkManager /run/runit/service/NetworkManager
+#ln -s /etc/runit/sv/NetworkManager /run/runit/service/NetworkManager
 
 ## BLACKARCH
 curl -O https://blackarch.org/strap.sh &&
