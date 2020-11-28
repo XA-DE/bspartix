@@ -9,15 +9,12 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
 
 ## SYSTEM CONFIG
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen &&
+echo "export LANG="en_US.UTF-8" " >> /etc/locale.conf &&
+echo "x" >> /etc/hostname
 echo "
 127.0.0.1	localhost
 ::1		localhost
 127.0.1.1	x.localdomain	x
 " >> /etc/hosts
-echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen &&
-echo "export LANG="en_US.UTF-8" " >> /etc/locale.conf &&
-echo "x" >> /etc/hostname
-cp etc/* /etc
 
-## ADDONS
-# sh addons
