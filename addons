@@ -32,9 +32,7 @@ cp -r truetype /usr/share/fonts &&
 cp -r dotfiles/. /home/x &&
 
 ## BT
-#cp  BCM43142A0-0a5c-21d7.hcd /lib/firmware/brcm/BCM43142A0-0a5c-21d7.hcd &&
-######comment if bt doesnot work########
-curl -o /lib/firmware/brcm/BCM43142A0-0a5c-21d7.hcd https://github.com/winterheart/broadcom-bt-firmware/blob/master/brcm/BCM43142A0-0a5c-21d7.hcd?raw=true &&
+cp  BCM43142A0-0a5c-21d7.hcd /lib/firmware/brcm/BCM43142A0-0a5c-21d7.hcd &&
 modprobe -r btusb &&
 modprobe btusb &&
 
